@@ -10,9 +10,10 @@
 
 // const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x); // example
 const compose = (...functions) => {
+    // debugger
     return (initialValue) =>{
-        // console.log('Initial value:' + initialValue)
-        // console.log('functions: ' + functions)
+        console.log('Initial value:' + initialValue)
+        console.log('functions: ' + functions)
         functions.reduce((result, func) => {
             console.log('func: ', func)
             console.log('result', result)
@@ -41,16 +42,27 @@ console.log(withСompose("Сротал")); // СРОТАЛ! СРОТАЛ! СРО
 
 // https://frontend-stuff.com/blog/composition/
 
-// const map = array => cb => array.map(cb);
+// const map = cb => {
+//     debugger
+//     console.log('cb',cb)
+//     return function (array) {
+//         console.log('array: ',array)
+//         console.log('cb inside: ',cb)
+//         return array.map(cb);
+//     }
+// }
+//
 // const arr = [1, 2, 3, 4, 5];
 // const double = n => n * 2;
 //
-// const withArr = map(arr);
+// const withDouble = map(double);
 //
-// console.log(withArr(double)); // [ 2, 4, 6, 8, 10 ]
-// console.log(withArr(n => n * 3)); // [ 3, 6, 9, 12, 15 ]
+// console.log(withDouble(arr)); // [2, 4, 6, 8, 10]
+// console.log(withDouble([2, 4, 6, 8, 10])); // [4, 8, 12, 16, 20]
+//
+// console.log('TEST:', map(double)(arr))
 
-
+//
 console.log('============================================')
 
 const map = cb => {
@@ -61,9 +73,8 @@ const map = cb => {
     }
 }
 
-
-
 const prop = key => {
+    debugger
     console.log('key: ', key)
     return function (obj) {
         console.log('obj[key]: ', obj[key])
