@@ -1,3 +1,10 @@
+// https://flagman.top/about-business/php-i-t-p-uzelki/funkcii-vysshego-poryadka-v-javascript
+// https://frontend-stuff.com/blog/composition/
+// https://habr.com/ru/company/yandex/blog/547786/
+// https://htmlacademy.ru/blog/boost/frontend/lets-learn-javascript-closures
+
+
+
 ///////////
 // Композиция
 // const compose = (...functions) => {
