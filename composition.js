@@ -16,32 +16,32 @@
 
 
 // const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x); // example
-const compose = (...functions) => {
-    // debugger
-    return (initialValue) =>{
-        console.log('Initial value:' + initialValue)
-        console.log('functions: ' + functions)
-        functions.reduce((result, func) => {
-            console.log('func: ', func)
-            console.log('result', result)
-            return func(result);
-        }, initialValue)
-    }
-
-};
-
-// Приводим функцию к верхнему регистру
-const upperCase = (str) => str.toUpperCase();
-
-// Добавляем восклицательный знак
-const exclaim = (str) => `${str}!`;
-
-// Повторяем строку трижды
-const repeat = (str) => `${str} `.repeat(3);
-
-const withСompose = compose(upperCase,exclaim, repeat);
-
-console.log(withСompose("Сротал")); // СРОТАЛ! СРОТАЛ! СРОТАЛ!
+// const compose = (...functions) => {
+//     debugger
+//     return (initialValue) =>{
+//         console.log('Initial value:' + initialValue)
+//         console.log('functions: ' + functions)
+//         functions.reduce((result, func) => {
+//             console.log('func: ', func)
+//             console.log('result', result)
+//             return func(result);
+//         }, initialValue)
+//     }
+//
+// };
+//
+// // Приводим функцию к верхнему регистру
+// const upperCase = (str) => str.toUpperCase();
+//
+// // Добавляем восклицательный знак
+// const exclaim = (str) => `${str}!`;
+//
+// // Повторяем строку трижды
+// const repeat = (str) => `${str} `.repeat(3);
+//
+// const withСompose = compose(upperCase,exclaim, repeat);
+// debugger
+// console.log(withСompose("Сротал")); // СРОТАЛ! СРОТАЛ! СРОТАЛ!
 
 //////////
 
@@ -63,13 +63,14 @@ console.log(withСompose("Сротал")); // СРОТАЛ! СРОТАЛ! СРО
 // const double = n => n * 2;
 //
 // const withDouble = map(double);
+// debugger
 //
 // console.log(withDouble(arr)); // [2, 4, 6, 8, 10]
 // console.log(withDouble([2, 4, 6, 8, 10])); // [4, 8, 12, 16, 20]
 //
 // console.log('TEST:', map(double)(arr))
 
-//
+
 console.log('============================================')
 
 const map = cb => {
@@ -80,7 +81,7 @@ const map = cb => {
     }
 }
 
-const prop = key => {
+const getValue = key => {
     debugger
     console.log('key: ', key)
     return function (obj) {
@@ -89,7 +90,8 @@ const prop = key => {
     }
 }
 
-const getName = prop("name");
+const getName = getValue("name");
+debugger
 console.log('getName: ', getName)
 
 const people = [
@@ -98,5 +100,7 @@ const people = [
     { name: "Leo" },
     { name: "Den" }
 ];
-
-console.log(map(getName)(people)); // ["Alex", "Julia", "Leo", "Den"]
+debugger
+const whatisit = map(getName)
+debugger
+console.log(whatisit(people)); // ["Alex", "Julia", "Leo", "Den"]
