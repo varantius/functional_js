@@ -42,11 +42,13 @@ const pushLastElement = (elem) => {
     }
 }
 
+
 const map = (fn) => {
     return function(arr){
         return arr.map(fn)
     }
 }
+
 
 const example = pipe(
     trace("Convert array To string"),
