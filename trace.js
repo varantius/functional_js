@@ -52,7 +52,7 @@ const slugify = compose(
     trace("after lowercase"), // after lowercase (3) ["javascript the good parts", "you don’t know js", "eloquent javascript"]
     map(split(" ")),
     trace("after split"), // after split (3) [Array(4), Array(4), Array(2)]
-    join("-"),
+    map(join("-")),
     trace("after join")
 
 );
