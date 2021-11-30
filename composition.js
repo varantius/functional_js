@@ -89,7 +89,7 @@ const getValue = key => {
         return obj[key];
     }
 }
-
+debugger
 const getName = getValue("name");
 debugger
 console.log('getName: ', getName)
