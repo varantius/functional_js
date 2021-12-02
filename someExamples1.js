@@ -29,7 +29,7 @@ debugger
 console.log(res); // {h: 1, e: 1, l: 2, o: 1}
 
 
-var test = [
+var test1 = [
     {color: 'white', id: 3},
     {color: 'black', id: 4},
 ]
@@ -51,5 +51,5 @@ const outputObject = (array, output = {}) => {
     return output;
 };
 
-console.log(arrToObject(test))
-console.log(outputObject(test))
+console.log(arrToObject(test1))
+console.log(outputObject(test1))

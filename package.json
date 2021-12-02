@@ -1,0 +1,23 @@
+{
+  "name": "functional_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "composition.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varantius/functional_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varantius/functional_js/issues"
+  },
+  "homepage": "https://github.com/varantius/functional_js#readme",
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
+}
