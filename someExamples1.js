@@ -13,11 +13,11 @@
 
 
 
-let s = 'hello my dick';
+let s = 'aaabcc';
 let result = [...s].reduce((acc, char) => {
     debugger
     if(acc[char]) {
-        acc[char]=  acc[char] + 1
+        acc[char] =  acc[char] + 1
     } else{
         acc[char] =  1
     }
