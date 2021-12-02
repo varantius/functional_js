@@ -14,8 +14,10 @@
 
 
 let s = 'aaabcc';
-let result = [...s].reduce((acc, char) => {
-    debugger
+let result = [...s];
+
+let res = result.reduce((acc, char) => {
+    // debugger
     if(acc[char]) {
         acc[char] =  acc[char] + 1
     } else{
@@ -24,7 +26,7 @@ let result = [...s].reduce((acc, char) => {
     return acc
 }, {});
 debugger
-console.log(result); // {h: 1, e: 1, l: 2, o: 1}
+console.log(res); // {h: 1, e: 1, l: 2, o: 1}
 
 
 var test = [
@@ -34,7 +36,7 @@ var test = [
 
 const arrToObject = (arr) =>
     arr.reduce((acc, item) => {
-        debugger
+        // debugger
         acc[item.color] = { ...acc[item.color], [item.id]: item };
         return acc;
     }, {});
