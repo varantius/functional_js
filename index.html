@@ -6,7 +6,7 @@
 
 </head>
 <body>
-    <h2>Some text</h2>
+<h2>Some text</h2>
 <!--    <script src="declarate.js"></script>-->
 <!--    <script src="trace.js"></script>-->
 <!--    <script src="composition.js"></script>-->
@@ -15,7 +15,21 @@
 <!--    <script src="myexample1.js"></script>-->
 <!--    <script src="ironman.js"></script>-->
 <!--    <script src="someExamples1.js"></script>-->
-    <script type="module" src="./01_intro/intro.js"></script>
+<script type="module" src="./01_intro/intro.js"></script>
+<script>
+    var array = [1, 2, 3, 5]
+    var func = x => x * 2
+    function newMap(array, callback) {
+        const result = []
+        debugger
+        for (let i = 0; i < array.length; i++) {
+            result.push(callback(array[i]))
+        }
+        return result
+    }
 
+    console.log(newMap(array, func))
+
+</script>
 </body>
 </html>
