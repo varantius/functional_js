@@ -17,19 +17,30 @@
 <!--    <script src="someExamples1.js"></script>-->
 <script type="module" src="./01_intro/intro.js"></script>
 <script>
-    var array = [1, 2, 3, 5]
-    var func = x => x * 2
-    function newMap(array, callback) {
-        const result = []
-        debugger
-        for (let i = 0; i < array.length; i++) {
-            result.push(callback(array[i]))
-        }
-        return result
+    // var array = [1, 2, 3, 5]
+    // var func = x => x * 2
+    // function newMap(array, callback) {
+    //     const result = []
+    //     debugger
+    //     for (let i = 0; i < array.length; i++) {
+    //         result.push(callback(array[i]))
+    //     }
+    //     return result
+    // }
+    //
+    // console.log(newMap(array, func))
+
+
+    function checkBrackets(string) {
+        let counter = 0;
+         string.split('').forEach(item => {
+            if (item.includes('(')) return counter++
+            return counter--
+        })
+        return counter === 0
     }
 
-    console.log(newMap(array, func))
-
+    console.log(checkBrackets('(())))('))
 </script>
 </body>
 </html>
