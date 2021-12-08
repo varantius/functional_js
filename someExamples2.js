@@ -24,23 +24,23 @@ function checkBrackets(string) {
 console.log(checkBrackets('(())))('))
 
 
-const arr = [1,1,2,3,4,4,5,6,6,7,7,8,9]
+const arr = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9]
 
-function withoutRepeat(array){
+function withoutRepeat(array) {
     const uniqueValue = []
-    const obj ={}
-    for(let i=0;I<array.length; i++){
+    const obj = {}
+    for (let i = 0; I < array.length; i++) {
         const currentEl = array[i]
-        if(!(currentEl in obj)){
+        if (!(currentEl in obj)) {
             obj[currentEl] = 1
-        }else{
+        } else {
             obj[currentEl] += 1
         }
     }
 
     const keys = Object.keys(obj)
-    keys.forEach((key) =>{
-            if(obj[key] === 1){
+    keys.forEach((key) => {
+            if (obj[key] === 1) {
                 uniqueValue.push(key)
             }
         }
@@ -50,3 +50,46 @@ function withoutRepeat(array){
 }
 
 console.log(withoutRepeat(arr))
+
+
+let obj = {
+    a: 42,
+    say: function () {
+        setTimeout(function () {
+            console.log(this.a)
+        })
+
+    }
+}
+obj.say()
+
+let obj1 = {
+    a: 42,
+    say: function () {
+        setTimeout(() => {
+            console.log(this.a)
+        })
+
+    }
+}
+
+obj1.say()
+
+let obj2 = {
+    a: 42,
+    say: function () {
+        setTimeout(() => {
+            console.log(this.a)
+        })
+
+    }
+}
+let u = obj2.say.bind(obj2);
+u()
+
+
+let ex = (value, sum) => console.log(sum + value)
+const fx = ex.bind(null, 20)
+
+ex(12, 7)
+fx(7, 12)
