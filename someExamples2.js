@@ -88,8 +88,3 @@ let u = obj2.say.bind(obj2);
 u()
 
 
-let ex = (value, sum) => console.log(sum + value)
-const fx = ex.bind(null, 20)
-
-ex(12, 7)
-fx(7, 12)
